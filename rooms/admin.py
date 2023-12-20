@@ -1,15 +1,14 @@
 from django.contrib import admin
-from rooms.models import Amenity, Rooms
+from rooms.models import Amenity, Room
 
-@admin.register(Rooms)
+
+@admin.register(Room)
 class RoomsAdmin(admin.ModelAdmin):
     list_display = (
         "name",
         "price",
     )
-    list_filter = (
-        'name',
-    )
+    list_filter = ("name",)
 
 
 @admin.register(Amenity)
